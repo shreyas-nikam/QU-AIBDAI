@@ -1,0 +1,478 @@
+{
+  "1 Introduction": [
+    {
+      "question": "What are the two main classes of AI systems mentioned in the text?",
+      "options": [
+        "Modular and Systematic",
+        "Analytical and Predictive",
+        "Predictive and Generative",
+        "Framework and Decentralized"
+      ],
+      "answer_option": "c",
+      "explanation": "The two main classes of AI systems mentioned in the text are Predictive and Generative."
+    },
+    {
+      "question": "What are some examples of failures caused by attacks on AI and ML technologies?",
+      "options": [
+        "Autonomous vehicles swerving into the opposite lane",
+        "Misclassification of road signs",
+        "Loss of internet connection",
+        "A and B"
+      ],
+      "answer_option": "d",
+      "explanation": "The text specifically mentions autonomous vehicles swerving into the opposite lane and misclassification of road signs as failures caused by attacks on AI and ML technologies."
+    },
+    {
+      "question": "What are Generative AI (GenAI) systems commonly used for?",
+      "options": [
+        "Object detection",
+        "Online search and powering chatbots",
+        "Vehicle navigation",
+        "Database management"
+      ],
+      "answer_option": "b",
+      "explanation": "The text mentions that GenAI systems are commonly used for online search, coding aid, powering chatbots, and Retrieval Augmented Generation (RAG)."
+    },
+    {
+      "question": "Why is user privacy online a potential risk in AI Systems?",
+      "options": [
+        "Because internet is not secure",
+        "Because AI models can get hacked",
+        "Because AI models use datasets that may include sensitive personal information",
+        "None of these"
+      ],
+      "answer_option": "c",
+      "explanation": "The given text suggests that companies developing AI models often do not release information about the datasets they use, which sometimes include sensitive personal information such as addresses and emails, thus risking user privacy online."
+    },
+    {
+      "question": "What is data poisoning?",
+      "options": [
+        "Deleting important data",
+        "Illegally obtaining data",
+        "Manipulating training data of AI models",
+        "Spreading malware through data"
+      ],
+      "answer_option": "c",
+      "explanation": "Data poisoning, in this context, refers to the manipulation of AI models' training data which could lead to potential security breaches."
+    },
+    {
+      "question": "How can pre-trained AI models pose risks?",
+      "options": [
+        "They are hard to train",
+        "They are not efficient",
+        "They can be maliciously modified leading to data leaks and incorrect processing",
+        "They do not work well with new datasets"
+      ],
+      "answer_option": "c",
+      "explanation": "The text states that pre-trained models, which could be adjusted with new datasets for different tasks, can be maliciously modified. This could risk data leaks, incorrect processing, model availability, etc."
+    },
+    {
+      "question": "What is an example of a negative outcome from adversarial distortions in Predictive AI (PredAI)?",
+      "options": [
+        "Incorrect road sign classification",
+        "Improper data storage",
+        "Incorrect data prediction",
+        "High energy consumption"
+      ],
+      "answer_option": "a",
+      "explanation": "The text gives an example of adversarial distortions in Predictive AI (PredAI) leading to incorrect road sign classification."
+    },
+    {
+      "question": "What is the potential harm with large language models (LLMs) in Generative AI (GenAI)?",
+      "options": [
+        "Slow processing speed",
+        "Potential for exposing confidential and proprietary enterprise data",
+        "Lack of understanding of human language",
+        "Inability to generate meaningful sentences"
+      ],
+      "answer_option": "b",
+      "explanation": "As per the text, with large language models (LLMs) that are integral to the Internet infrastructure, a new attack surface can expose confidential and proprietary enterprise data."
+    },
+    {
+      "question": "Why may scraping of training data from the Internet pose a security risk in AI systems?",
+      "options": [
+        "It results in slow processing of data",
+        "It can lead to data poisoning at scale",
+        "It increases cost of data handling",
+        "It is an illegal practice"
+      ],
+      "answer_option": "b",
+      "explanation": "The practice of scraping training data from the Internet opens up the possibility of data poisoning at scale, leading to potential security breaches, as per the text."
+    },
+    {
+      "question": "Which AI class is particularly affected by adversarial distortions?",
+      "options": [
+        "Predictive AI (PredAI)",
+        "Generative AI (GenAI)",
+        "Both Predictive and Generative AI",
+        "None of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "The text specifically mentions that Predictive AI (PredAI) is badly affected by adversarial distortions, particularly affecting object detection and classification applications."
+    }
+  ],
+  "2 Predictive AI Taxonomy": [
+    {
+      "question": "What are the two stages involved in Machine learning?",
+      "options": [
+        "Analysis and design",
+        "Development and testing",
+        "Training and Deployment",
+        "None of the above"
+      ],
+      "answer_option": "c",
+      "explanation": "Machine learning involves a training stage, in which a model is learned, and a deployment stage, in which the model is deployed on new, unlabeled data samples to generate predictions."
+    },
+    {
+      "question": "What are the common types of supervised learning techniques?",
+      "options": [
+        "Classification and Regression",
+        "Fuzzy logic and Genetic algorithm",
+        "Evolutionary algorithms and Neural networks",
+        "None of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "Common supervised learning techniques include classification, in which the predicted labels or _classes_ are discrete, and regression, in which the predicted labels or _response variables_ are continuous."
+    },
+    {
+      "question": "In Machine learning, what is a generative model?",
+      "options": [
+        "Model that specializes in regression",
+        "Model that predicts labels",
+        "Model that learns the distribution of training data and generates similar examples",
+        "Model that learns only a decision boundary"
+      ],
+      "answer_option": "c",
+      "explanation": "Generative models in Machine learning learn the distribution of training data and generates similar examples."
+    },
+    {
+      "question": "What is a poisoning attack in the context of Machine Learning?",
+      "options": [
+        "Attacks that compromise the integrity of a model",
+        "Attacks that compromise the privacy of a model",
+        "Attacks during the ML training stage",
+        "Attacks that compromise the availability of a model"
+      ],
+      "answer_option": "c",
+      "explanation": "In the context of machine learning, attacks during the ML training stage are called poisoning attacks. These can occur during the ML training stage where the attacker might control part of the training data or their labels, the model parameters, or the code of ML algorithms."
+    },
+    {
+      "question": "What does an integrity attack in Machine Learning refer to?",
+      "options": [
+        "Attack that compromises the model's ability to generate predictions",
+        "Attack that compromises the model's training data",
+        "Attack that compromises the model's code",
+        "Attack that targets the integrity of an ML model's output, resulting in incorrect predictions performed by an ML model."
+      ],
+      "answer_option": "d",
+      "explanation": "An integrity attack targets the integrity of a model's output, resulting in incorrect predictions performed by an ML model."
+    },
+    {
+      "question": "What is a privacy compromise attack in Machine Learning?",
+      "options": [
+        "Attacks aimed at learning information about the training data or the ML model",
+        "Attacks aimed at compromising the integrity of a model's output",
+        "Attacks aimed at compromising the availability of a model",
+        "None of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "A privacy compromise attack in Machine Learning is when attackers are interested in learning information about the training data or the ML model."
+    },
+    {
+      "question": "What are the different types of knowledge an attacker could possess in the context of machine learning attacks?",
+      "options": [
+        "White-box, black-box, and gray-box knowledge",
+        "Deep knowledge, surface knowledge, and intermediate knowledge",
+        "Theoretical knowledge, practical knowledge, and intuitive knowledge",
+        "None of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "There are three main types of knowledge an attacker might have about the ML system: white-box, black-box, and gray-box."
+    },
+    {
+      "question": "What is an evasion attack in the context of Machine Learning?",
+      "options": [
+        "An attack that compromises the model's availability",
+        "An attack where the goal is to generate adversarial examples whose classification can be changed at deployment time to an arbitrary class",
+        "An attack that compromises the model's integrity",
+        "None of the above"
+      ],
+      "answer_option": "b",
+      "explanation": "An evasion attack in Machine Learning is where the adversary's goal is to generate adversarial examples, defined as testing samples whose classification can be changed at deployment time to an arbitrary class of the attacker's choice with only minimal perturbation."
+    },
+    {
+      "question": "What is a universal evasion attack in Machine Learning?",
+      "options": [
+        "An attack that adapts perturbation globally",
+        "An attack where small universal perturbations are constructed which can be added to most images and induce a misclassification",
+        "An attack where unique perturbation is added each time",
+        "None of the above"
+      ],
+      "answer_option": "b",
+      "explanation": "A universal evasion attack in Machine Learning is when small universal perturbations are constructed to be added to most images and induce a misclassification."
+    },
+    {
+      "question": "What is a black-box evasion attack in the context of Machine Learning?",
+      "options": [
+        "An attack that assumes the attacker has no prior knowledge of the model architecture or training data",
+        "An attack where the attacker is allowed to inspect the entirety of the ML model and compute gradients relative to the model's loss function",
+        "An attack that has full knowledge of the Machine Learning system",
+        "None of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "A black-box evasion attack in Machine Learning is designed under a realistic adversarial model, in which the attacker has no prior knowledge of the model architecture or training data. Instead, the adversary can interact with a trained ML model by querying it on various data samples and obtaining the model's predictions."
+    }
+  ],
+  "3 Generative AI Taxonomy": [
+    {
+      "question": "What does Generative AI do?",
+      "options": [
+        "Generates mathematical models",
+        "Generates text, images, and other media like its training data",
+        "Is used to test other AI models",
+        "All of the above"
+      ],
+      "answer_option": "b",
+      "explanation": "Generative AI generates content such as images, text and other media similar to its training data."
+    },
+    {
+      "question": "What are the technologies included in Generative AI?",
+      "options": [
+        "Generative adversarial networks and Generative Pre-Trained Transformer",
+        "Diffusion Model and Generative adversarial network",
+        "Diffusion model and Generative Pre-Trained Transformer",
+        "All of the above"
+      ],
+      "answer_option": "d",
+      "explanation": "Generative AI involves technologies such as generative adversarial networks, Generative Pre-Trained Transformer, and Diffusion Model."
+    },
+    {
+      "question": "What is the function of Generative adversarial networks (GANs)?",
+      "options": [
+        "They work by having two networks, a generator and a discriminator, compete with each other",
+        "They work by adversarial training of generator and discriminator",
+        "They are used to generate high quality images",
+        "All of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "GANs are AI models that work by having two networks, a generator and a discriminator, compete with each other."
+    },
+    {
+      "question": "What does the Generative Pre-Trained Transformer (GPT) do?",
+      "options": [
+        "It uses transformer models to generate grammatically correct sentences",
+        "It uses pre-trained models to generate text",
+        "It uses neural network models to generate high quality media",
+        "All of the above"
+      ],
+      "answer_option": "a",
+      "explanation": "The Generative Pre-Trained Transformer (GPT) is an AI model that uses transformer models to generate coherent, grammatically correct sentences."
+    },
+    {
+      "question": "What function do Diffusion Models serve in Generative AI?",
+      "options": [
+        "They work by learning representation of training data",
+        "They generate new instances from the distributions learned from training data",
+        "They are used to generate high quality images",
+        "All of the above"
+      ],
+      "answer_option": "b",
+      "explanation": "Diffusion Models are a type of generative model that generate new instances from the distributions learned from training data."
+    },
+    {
+      "question": "What is the objective of adversaries while launching attacks on Generative AI?",
+      "options": [
+        "Availability breakdowns",
+        "Integrity violations",
+        "Privacy compromise",
+        "All of the above"
+      ],
+      "answer_option": "d",
+      "explanation": "The objectives of adversaries while launching attacks on Generative AI include availability breakdowns, integrity violations, privacy compromise, and violations of abuse."
+    },
+    {
+      "question": "What are some of the potential security violations in Generative AI?",
+      "options": [
+        "Manipulating training data",
+        "Prompt injection",
+        "Modifying key components of the ML algorithm",
+        "All of the above"
+      ],
+      "answer_option": "d",
+      "explanation": "In Generative AI, attacks can include manipulating training data (training data control), submitting inputs to the model (query access), or modifying key components of the machine learning algorithm (source code control)."
+    },
+    {
+      "question": "What scenario suggests misuse of GenAI models and poses an abuse violation?",
+      "options": [
+        "When an attacker reposts a misuse of GenAI system's intended use to achieve their own objectives",
+        "When GenAI models are used to promote hate speech",
+        "When GenAI models generate media that incites violence",
+        "All of the above"
+      ],
+      "answer_option": "d",
+      "explanation": "Abuse violations occur when an attacker repurposes a GenAI system's intended use to achieve their own objectives such as promoting hate speech or generating media that incites violence."
+    },
+    {
+      "question": "What is the significant security concern regarding Generative AI products and supply chain?",
+      "options": [
+        "Inheritance of vulnerabilities of the traditional software supply chain",
+        "Vulnerability of widely used repositories such as TensorFlow and OpenCV",
+        "Both a and b",
+        "Neither a nor b"
+      ],
+      "answer_option": "c",
+      "explanation": "As AI models are software-based, they inherit the vulnerabilities of the traditional software supply chain. Repositories like TensorFlow and OpenCV, which are widely used in AI and ML projects, have significant vulnerability exposure."
+    },
+    {
+      "question": "What are the dimensions of attacking objectives related to GenAI?",
+      "options": ["Availability", "Integrity", "Privacy", "All of the above"],
+      "answer_option": "d",
+      "explanation": "Attacker objectives in Generative AI can be classified broadly along the dimensions of availability, integrity, privacy and abuse violations."
+    }
+  ],
+  "4 Discussion and Remaining Challenges": [
+    {
+      "question": "Why is the scale of training data considered a significant challenge in Adversarial Machine Learning?",
+      "options": [
+          "Because smaller data sets are insufficient for training Large Language Models (LLMs)",
+          "As models grow, the amount of training data required decreases",
+          "As models grow, the amount of training data required increases, necessitating gigantic data amounts",
+          "Because the cost of data storage becomes cheaper with larger data sets"
+      ],
+      "answer_option": "c",
+      "explanation": "The scale of training data is a significant challenge because as models grow in complexity and capability, the amount of training data they require also increases. This is especially true for Large Language Models (LLMs), which utilize massive amounts of data for training."
+  },
+  {
+      "question": "What does modern data repositories consist of, according to the module?",
+      "options": [
+          "Single units of static data",
+          "Labels and links connected to servers holding the actual data",
+          "Physical storage devices distributed globally",
+          "Encrypted data only accessible by the owning organization"
+      ],
+      "answer_option": "b",
+      "explanation": "Modern data repositories are not simply single units of data. Instead, they consist of labels and links connected to servers that hold the actual data. This structure introduces new cybersecurity risks and challenges."
+  },
+  {
+      "question": "What is a direct cybersecurity risk associated with the structure of modern data repositories?",
+      "options": [
+          "High cost of data encryption",
+          "Single point of failure in data storage",
+          "Data being distributed across various modalities and locations",
+          "Complexity in managing large volumes of data"
+      ],
+      "answer_option": "c",
+      "explanation": "The direct cybersecurity risk associated with modern data repositories comes from data being distributed across various modalities and locations. No single organization or nation owns the complete data used for training an LLM, making it challenging to ensure security across all data sources."
+  },
+  {
+      "question": "How does the capacity to produce synthetic content at scale negatively impact LLMs?",
+      "options": [
+          "By making it easier to create and distribute malware",
+          "By increasing the cost of training LLMs",
+          "By potentially leading to model collapse due to the intake of large amounts of unverified data",
+          "By reducing the need for real human-generated content"
+      ],
+      "answer_option": "c",
+      "explanation": "The capacity to produce synthetic content at scale can negatively impact LLMs by potentially leading to model collapse. This is because LLMs may consume large amounts of synthetic, possibly unverified or misleading, data during training, affecting their performance and reliability."
+  },
+  {
+      "question": "What is the primary purpose of open-source data poisoning tools?",
+      "options": [
+          "To enhance the security of copyrighted materials",
+          "To generate synthetic content for training data sets",
+          "To protect copyright, particularly for artists",
+          "To facilitate the training of adversarial models"
+      ],
+      "answer_option": "c",
+      "explanation": "The primary purpose of open-source data poisoning tools is to protect copyright, particularly for artists. These tools can alter image training data in a way that asserts copyright claims, but their misuse can lead to significant risks and challenges for machine learning systems."
+  },
+  {
+      "question": "What challenge does the availability of powerful models that can generate massive amounts of unmarked synthetic content pose?",
+      "options": [
+          "Increased computational costs for model training",
+          "Difficulty in distinguishing between synthetic and real content",
+          "Potential impacts on the performance of subsequently trained LLMs",
+          "Easier detection of adversarial attacks"
+      ],
+      "answer_option": "c",
+      "explanation": "The availability of powerful models capable of generating massive amounts of unmarked synthetic content poses a challenge to the integrity of Large Language Models (LLMs). This unmarked synthetic content can severely impact the performance of subsequently trained LLMs, potentially leading to issues like model collapse."
+  },
+  {
+      "question": "Why is watermarking considered a potential solution for the challenge of synthetic content?",
+      "options": [
+          "It can increase the computational efficiency of LLMs",
+          "It helps in identifying and tracking the origin of synthetic content",
+          "It makes synthetic content more realistic",
+          "It reduces the overall cost of model training"
+      ],
+      "answer_option": "b",
+      "explanation": "Watermarking is considered a potential solution for the challenge of synthetic content because it helps in identifying and tracking the origin of such content. By marking synthetic content, it becomes possible to distinguish it from real data, mitigating some risks associated with its use in training LLMs."
+  },
+  {
+    "question": "Why do current limitations in detecting when a model is under attack pose a significant challenge in Adversarial Machine Learning?",
+    "options": [
+        "They prevent the development of new machine learning algorithms",
+        "They limit the amount of data that can be used for training",
+        "Identifying an attack early allows for countermeasures to prevent adverse effects",
+        "They make it easier for attackers to steal data"
+    ],
+    "answer_option": "c",
+    "explanation": "The limitations in detecting when a model is under attack pose a significant challenge because identifying an attack early can allow for countermeasures to be taken, preventing potential information loss or triggering of adverse behavior in the model."
+},
+{
+    "question": "What role do data and model sanitization techniques play in Adversarial Machine Learning?",
+    "options": [
+        "They primarily increase the speed of model training",
+        "They reduce the impact of poisoning attacks on the models",
+        "They are used to increase the accuracy of models on test data",
+        "They prevent all forms of cyber attacks on AI systems"
+    ],
+    "answer_option": "b",
+    "explanation": "Data and model sanitization techniques play a crucial role in reducing the impact of poisoning attacks on the models. By identifying and mitigating malicious alterations to data or model parameters, these techniques help in safeguarding the integrity of machine learning systems."
+},
+{
+    "question": "Why is the rapid advancement of AI technology considered a challenge in terms of privacy attacks?",
+    "options": [
+        "Because it leads to faster computation times",
+        "Because it creates a gap in the development of effective mitigation techniques",
+        "Because it reduces the overall cost of deploying AI systems",
+        "Because it simplifies the process of model training"
+    ],
+    "answer_option": "b",
+    "explanation": "The rapid advancement of AI technology outpaces the development of effective mitigation techniques, creating a gap that can expose privacy vulnerabilities and attract more adversaries. This imbalance poses significant challenges in protecting privacy and securing AI systems."
+},
+{
+    "question": "What is the primary concern regarding the open vs. closed model dilemma in AI?",
+    "options": [
+        "The cost associated with developing open models",
+        "The potential misuse of open AI technology by malicious individuals or groups",
+        "The difficulty in maintaining open source code",
+        "The challenge of integrating open models into existing systems"
+    ],
+    "answer_option": "b",
+    "explanation": "The primary concern regarding the open vs. closed model dilemma in AI revolves around the potential misuse of open AI technology by malicious individuals or groups. This issue highlights the need for careful consideration in how we approach the accessibility of AI models to balance the benefits of open models with the risks they present."
+},
+{
+    "question": "What challenge does the lack of information-theoretically secure machine learning algorithms present?",
+    "options": [
+        "It complicates the process of algorithm selection",
+        "It increases the computational resources needed",
+        "It obstructs the development of fully secure AI systems",
+        "It simplifies the task of adversarial attackers"
+    ],
+    "answer_option": "c",
+    "explanation": "The lack of information-theoretically secure machine learning algorithms presents a challenge in that it obstructs the development of fully secure AI systems. Ensuring the safety and reliability of AI in critical domains requires overcoming this obstacle to mitigate potential vulnerabilities."
+},
+{
+    "question": "Why is continuous monitoring essential in the use of chatbots?",
+    "options": [
+        "To ensure they are updated with the latest data",
+        "To prevent them from becoming obsolete",
+        "To detect and mitigate potential vulnerabilities and attacks",
+        "To monitor user satisfaction and improve responses"
+    ],
+    "answer_option": "c",
+    "explanation": "Continuous monitoring is essential in the use of chatbots to detect and mitigate potential vulnerabilities and attacks. As chatbots become more prevalent, adversaries continually seek new ways to exploit them, making vigilance crucial for maintaining security."
+}
+  ]
+}

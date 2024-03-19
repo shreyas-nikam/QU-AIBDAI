@@ -1,0 +1,39 @@
+{
+  "APP_NAME": "NIST AI - Adversarial Machine Learning ",
+
+  "DOCUMENT_LINK": "https://rpc.cfainstitute.org/-/media/documents/article/rf-brief/ai-and-big-data-in-investments.pdf",
+
+  "PDF_FILE_PATH": "data/data/ai-and-big-data-in-investments.pdf",
+
+  "QUIZ_TOTAL_QUES": 5,
+
+  "SUPABASE_TABLE_NAME": "nist_users",
+
+  "COURSE_LINKS": [
+    "./data/slides/1 Introduction.pdf",
+    "./data/slides/2 Predictive AI Taxonomy.pdf",
+    "./data/slides/3 Generative AI Taxonomy.pdf",
+    "./data/slides/4 Discussion and Remaining Challenges.pdf"
+  ],
+
+  "COURSE_NAMES": [
+    "1. Introduction",
+    "2. Predictive AI Taxonomy",
+    "3. Generative AI Taxonomy",
+    "4. Discussion and Remaining Challenges"
+  ],
+
+  "VIDEOS_LINKS": [
+    "./data/videos/1 Introduction.mp4",
+    "./data/videos/2 Predictive AI Taxonomy.mp4",
+    "./data/videos/3 Generative AI Taxonomy.mp4",
+    "./data/videos/4 Discussion and Remaining Challenges.mp4"
+  ],
+
+  "TRANSCRIPTS_FILES": [
+    "./data/transcripts/transcript_1.txt",
+    "./data/transcripts/transcript_2.txt",
+    "./data/transcripts/transcript_3.txt",
+    "./data/transcripts/transcript_4.txt"
+  ]
+}
