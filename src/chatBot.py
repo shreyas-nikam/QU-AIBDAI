@@ -217,7 +217,7 @@ If the answer is not present in the context, return "Please provide more context
         <p style='text-align: left; font-size:12px;'><i>Note:</i><br>
             <i>Qubot</i> is an experimental AI-bot that utilizes information from a published <a href="{url}">document</a>. You can experiment with Qubot a few times for free. Later, you can use your own <a href="{key_link}">OpenAI key</a> for further usage.
         </p>
-        """.format(url="https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page", key_link="https://platform.openai.com/docs/quickstart#:~:text=First%2C%20create%20an%20OpenAI%20account,not%20share%20it%20with%20anyone"), unsafe_allow_html=True)
+        """.format(url=st.session_state.config_param['DOCUMENT_LINK'], key_link="https://platform.openai.com/docs/quickstart#:~:text=First%2C%20create%20an%20OpenAI%20account,not%20share%20it%20with%20anyone"), unsafe_allow_html=True)
 
         if st.session_state.keyOwner != "None" :
             for message in st.session_state.messages:

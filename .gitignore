@@ -176,5 +176,3 @@ secrets.toml
 #DS_STORE
 
 .DS_Store
-
-data/last_updated.json

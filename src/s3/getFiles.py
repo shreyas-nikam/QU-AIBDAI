@@ -6,7 +6,8 @@ from pathlib import Path
 
 AWS_ACCESS_KEY = st.secrets["AWS_ACCESS_KEY"]
 AWS_SECRET_KEY = st.secrets["AWS_SECRET_KEY"]
-BUCKET_NAME = "qu-nist"
+BUCKET_NAME = "qucoursify"
+PREFIX = "qu-aibdi/test/"
 
 # get the last updated json from data/last_updated.json locally
 def get_last_updated_local():
@@ -20,11 +21,11 @@ def get_last_updated_s3():
     last_updated = {"videos":{}, "slides":{}, 'transcripts':{}}
     for obj in s3.list_objects_v2(Bucket=BUCKET_NAME)['Contents']:
         # if the file is a video, store the file name and last modified date in a dictionary and return it
-        if obj['Key'].split('.')[-1] == 'mp4':
+        if obj['Key'].split('.')[-1] == 'mp4' and PREFIX in obj['Key']:
             last_updated["videos"][obj['Key'].split('/')[-1]] = obj['LastModified']
-        elif obj['Key'].split('.')[-1] == 'pdf':
+        elif obj['Key'].split('.')[-1] == 'pdf' and PREFIX in obj['Key'] and 'slides' in obj['Key']:
             last_updated["slides"][obj['Key'].split('/')[-1]] = obj['LastModified']
-        elif obj['Key'].split('.')[-1] == 'txt':
+        elif obj['Key'].split('.')[-1] == 'txt' and PREFIX in obj['Key']:
             last_updated["transcripts"][obj['Key'].split('/')[-1]] = obj['LastModified']
 
     return last_updated
@@ -37,7 +38,7 @@ def fetch_updated_files():
     Path("./data/transcripts").mkdir(parents=True, exist_ok=True)
     local_files = get_last_updated_local()
     s3_files = get_last_updated_s3()
-    print(local_files, s3_files)
+    
     # iterate over the vidoes and download the updated videos
     for video in s3_files["videos"]:
         if video not in local_files["videos"] or s3_files["videos"][video].strftime("%Y-%m-%d %H:%M:%S") != local_files["videos"][video]:
@@ -46,7 +47,7 @@ def fetch_updated_files():
                 os.remove("data/videos/"+video)
             # download the new video
             s3 = boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY)
-            s3.download_file(BUCKET_NAME, "videos/"+video, "data/videos/"+video)
+            s3.download_file(BUCKET_NAME, PREFIX+"videos/"+video, "data/videos/"+video)
             local_files["videos"][video] = s3_files["videos"][video].strftime("%Y-%m-%d %H:%M:%S")
     
     # delete the local videos that are not present in the s3_file
@@ -63,7 +64,7 @@ def fetch_updated_files():
                 os.remove("data/slides/"+slide)
             # download the new slide
             s3 = boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY)
-            s3.download_file(BUCKET_NAME, "slides/"+slide, "data/slides/"+slide)
+            s3.download_file(BUCKET_NAME, PREFIX+"slides/"+slide, "data/slides/"+slide)
             local_files["slides"][slide] = s3_files["slides"][slide].strftime("%Y-%m-%d %H:%M:%S")
 
     # delete the local slides that are not present in the s3_file
@@ -80,7 +81,7 @@ def fetch_updated_files():
                 os.remove("data/transcripts/"+transcript)
             # download the new transcript
             s3 = boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY)
-            s3.download_file(BUCKET_NAME, "transcripts/"+transcript, "data/transcripts/"+transcript)
+            s3.download_file(BUCKET_NAME, PREFIX+"transcripts/"+transcript, "data/transcripts/"+transcript)
             local_files["transcripts"][transcript] = s3_files["transcripts"][transcript].strftime("%Y-%m-%d %H:%M:%S")
 
     # delete the local transcripts that are not present in the s3_file
@@ -92,4 +93,3 @@ def fetch_updated_files():
     # update the last updated json
     with open('data/last_updated.json', 'w') as f:
         json.dump(local_files, f)
-

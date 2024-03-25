@@ -1,39 +1,67 @@
 {
-  "APP_NAME": "NIST AI - Adversarial Machine Learning ",
+  "APP_NAME": "AI and Big Data Applications in Investments",
 
   "DOCUMENT_LINK": "https://rpc.cfainstitute.org/-/media/documents/article/rf-brief/ai-and-big-data-in-investments.pdf",
 
-  "PDF_FILE_PATH": "data/data/ai-and-big-data-in-investments.pdf",
+  "PDF_FILE_PATH": "data/ai-and-big-data-in-investments.pdf",
 
   "QUIZ_TOTAL_QUES": 5,
 
   "SUPABASE_TABLE_NAME": "nist_users",
 
   "COURSE_LINKS": [
-    "./data/slides/1 Introduction.pdf",
-    "./data/slides/2 Predictive AI Taxonomy.pdf",
-    "./data/slides/3 Generative AI Taxonomy.pdf",
-    "./data/slides/4 Discussion and Remaining Challenges.pdf"
+    "./data/slides/1 On Machine Learning Applications In Investments.pdf",
+    "./data/slides/2 Alternative Data and AI in Investment Research.pdf",
+    "./data/slides/3 Data Science for Active and Long-Term Fundamental Investing.pdf",
+    "./data/slides/4 Unlocking Insights and Opportunities.pdf",
+    "./data/slides/5 Advances in Natural Language Understanding for Investment Management.pdf",
+    "./data/slides/6 Extracting Text-Based ESG Insights - A Hands-on Guide.pdf",
+    "./data/slides/7 Machine Learning and Big Data Trade Execution Support.pdf",
+    "./data/slides/8 Machine Learning for Microstructure Data-Driven Execution Algorithms.pdf",
+    "./data/slides/9 Intelligent Customer Service in Finance.pdf",
+    "./data/slides/10 Accelerated AI and Use Cases in Investment Management.pdf",
+    "./data/slides/11 Symbolic AI - A Case Study.pdf"
   ],
 
   "COURSE_NAMES": [
-    "1. Introduction",
-    "2. Predictive AI Taxonomy",
-    "3. Generative AI Taxonomy",
-    "4. Discussion and Remaining Challenges"
+    "1. On Machine Learning Applications In Investments",
+    "2. Alternative Data and AI in Investment Research",
+    "3. Data Science for Active and Long-Term Fundamental Investing",
+    "4. Unlocking Insights and Opportunities",
+    "5. Advances in Natural Language Understanding for Investment Management",
+    "6. Extracting Text-Based ESG Insights - A Hands-on Guide",
+    "7. Machine Learning and Big Data Trade Execution Support",
+    "8. Machine Learning for Microstructure Data-Driven Execution Algorithms",
+    "9. Intelligent Customer Service in Finance",
+    "10. Accelerated AI and Use Cases in Investment Management",
+    "11. Symbolic AI - A Case Study"
   ],
 
   "VIDEOS_LINKS": [
-    "./data/videos/1 Introduction.mp4",
-    "./data/videos/2 Predictive AI Taxonomy.mp4",
-    "./data/videos/3 Generative AI Taxonomy.mp4",
-    "./data/videos/4 Discussion and Remaining Challenges.mp4"
+    "./data/videos/1 On Machine Learning Applications In Investments.mp4",
+    "./data/videos/2 Alternative Data and AI in Investment Research.mp4",
+    "./data/videos/3 Data Science for Active and Long-Term Fundamental Investing.mp4",
+    "./data/videos/4 Unlocking Insights and Opportunities.mp4",
+    "./data/videos/5 Advances in Natural Language Understanding for Investment Management.mp4",
+    "./data/videos/6 Extracting Text-Based ESG Insights - A Hands-on Guide.mp4",
+    "./data/videos/7 Machine Learning and Big Data Trade Execution Support.mp4",
+    "./data/videos/8 Machine Learning for Microstructure Data-Driven Execution Algorithms.mp4",
+    "./data/videos/9 Intelligent Customer Service in Finance.mp4",
+    "./data/videos/10 Accelerated AI and Use Cases in Investment Management.mp4",
+    "./data/videos/11 Symbolic AI - A Case Study.mp4"
   ],
 
   "TRANSCRIPTS_FILES": [
-    "./data/transcripts/transcript_1.txt",
-    "./data/transcripts/transcript_2.txt",
-    "./data/transcripts/transcript_3.txt",
-    "./data/transcripts/transcript_4.txt"
+    "./data/transcripts/1 On Machine Learning Applications In Investments.txt",
+    "./data/transcripts/2 Alternative Data and AI in Investment Research.txt",
+    "./data/transcripts/3 Data Science for Active and Long-Term Fundamental Investing.txt",
+    "./data/transcripts/4 Unlocking Insights and Opportunities.txt",
+    "./data/transcripts/5 Advances in Natural Language Understanding for Investment Management.txt",
+    "./data/transcripts/6 Extracting Text-Based ESG Insights - A Hands-on Guide.txt",
+    "./data/transcripts/7 Machine Learning and Big Data Trade Execution Support.txt",
+    "./data/transcripts/8 Machine Learning for Microstructure Data-Driven Execution Algorithms.txt",
+    "./data/transcripts/9 Intelligent Customer Service in Finance.txt",
+    "./data/transcripts/10 Accelerated AI and Use Cases in Investment Management.txt",
+    "./data/transcripts/11 Symbolic AI - A Case Study.txt"
   ]
 }
