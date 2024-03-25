@@ -5,7 +5,7 @@
 
   "PDF_FILE_PATH": "data/ai-and-big-data-in-investments.pdf",
 
-  "QUIZ_TOTAL_QUES": 5,
+  "QUIZ_TOTAL_QUES": 20,
 
   "SUPABASE_TABLE_NAME": "nist_users",
 
