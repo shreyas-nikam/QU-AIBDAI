@@ -216,7 +216,7 @@ If the answer is not present in the context, return "Please provide more context
         st.markdown("""
         <p style='text-align: left; font-size:12px;'><i>Note:</i><br>
             <i>Qubot</i> is an experimental AI-bot that utilizes information from a published <a href="{url}">document</a>. You can experiment with Qubot a few times for free. Later, you can use your own <a href="{key_link}">OpenAI key</a> for further usage.
-        </p>
+            Quantuniversity does not store or use this key outside of your current usage. Quantuniversity is not responsible for misuse of the key and is not liable for any charges other than for the current use of the QUBot. Use QUBot at your own risk.</p>
         """.format(url=st.session_state.config_param['DOCUMENT_LINK'], key_link="https://platform.openai.com/docs/quickstart#:~:text=First%2C%20create%20an%20OpenAI%20account,not%20share%20it%20with%20anyone"), unsafe_allow_html=True)
 
         if st.session_state.keyOwner != "None" :
@@ -258,7 +258,7 @@ If the answer is not present in the context, return "Please provide more context
                 send_prompt(ques3)
 
         else:
-            st.warning("You have exhausted your free trial. Enter your OpenAI key below to conitnue")
+            st.warning("You have exhausted your free trial. Enter your OpenAI key below to continue.")
             # input_content, btn_content = st.columns([0.8,0.2])
             OPENAI_KEY = st.text_input('OpenAI key:',type="password")
 
