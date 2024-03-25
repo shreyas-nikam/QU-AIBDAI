@@ -52,8 +52,6 @@ def display_on_chat(text, is_user=False):
         message_bg_color = "#71797E"
         avatar_class = "bot-avatar"
 
-        text = format_message(text)
-
         st.markdown(
             f"""
                 <div style="display: flex; align-items: center; margin-bottom: 10px; justify-content: {message_alignment};">
