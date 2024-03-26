@@ -7,7 +7,13 @@
 
   "QUIZ_TOTAL_QUES": 20,
 
-  "SUPABASE_TABLE_NAME": "nist_users",
+  "APP_CODE":"AIBDAI",
+  
+  "USER_TABLE_NAME": "users",
+  
+  "QUIZ_RESULT_TABLE_NAME": "quiz_results",
+  
+  "USER_QUIZ_INTERACTION_TABLE_NAME": "user_quiz_interaction",
 
   "COURSE_LINKS": [
     "./data/slides/1 On Machine Learning Applications In Investments.pdf",
