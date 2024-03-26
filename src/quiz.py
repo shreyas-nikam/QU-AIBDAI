@@ -13,8 +13,10 @@ questions = json.load(open("./data/questions.json"))
 class Quiz:
     def __init__(self):
         self.NUM_QUESTIONS_TO_SOLVE = st.session_state.config_param["QUIZ_TOTAL_QUES"]
+        self.interaction_table_name: str = st.session_state.config_param["USER_QUIZ_INTERACTION_TABLE_NAME"]
+        self.results_table_name: str = st.session_state.config_param["QUIZ_RESULT_TABLE_NAME"]
 
-    
+
     def main(self):
 
         def get_binary_file_downloader_html(bin_file, file_label='File'):
@@ -132,12 +134,24 @@ class Quiz:
                         st.session_state.right_answers += 1
                         st.session_state.module_history[st.session_state.curr_module][1]+=1
                         st.session_state.module_history[st.session_state.curr_module][2]+=1
+                        result = "Correct"
                     else:
                         results_placeholder.subheader("Incorrect!")
                         st.write(f"Sorry, the correct answer was \n {question['answer_option']}.")
                         st.session_state.wrong_answers += 1
                         st.session_state.module_history[st.session_state.curr_module][2]+=1
+                        result = "Incorrect"
+                    db_data = {
+                        'session_id' : st.session_state.session_id,
+                        'user_id': st.session_state.user_info['user_id'],
+                        'question_id': question['uuid'],
+                        'user_response': answer_option[selected_index],
+                        'result' : result,
+                        'app_code': st.session_state.config_param["APP_CODE"]
+                    }
+                    st.session_state.supabaseDB.table(self.interaction_table_name).insert(db_data).execute()
                     st.write(question["explanation"])
+                    
                 st.header(f"Score: {st.session_state.right_answers} / {st.session_state.current_question + 1}")
             
             # Display the current score at the bottom of the page
@@ -182,6 +196,15 @@ class Quiz:
             st.success("Congratulations! You have passed the quiz.")
             st.subheader("Summary", divider="grey")
             display_summary()
+            
+            result_data ={
+                        'app_code': st.session_state.config_param["APP_CODE"],
+                        'user_id': st.session_state.user_info['user_id'],
+                        'session_id' : st.session_state.session_id,
+                        'right_answer' : st.session_state.right_answers,
+                        'total_attempted' : st.session_state.current_question
+            }
+            st.session_state.supabaseDB.table(self.results_table_name).insert(result_data).execute()
 
             st.subheader("Here is your certificate:", divider="grey")
             certi = cv2.imread("./data/QU-Certificate.jpg")
@@ -197,7 +220,3 @@ class Quiz:
 
         else:
             display_question()
-
-    
-
-    
