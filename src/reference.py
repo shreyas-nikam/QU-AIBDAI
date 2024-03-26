@@ -22,7 +22,5 @@ class Reference:
         return pdf_display
 
     def main(self):
-        pdf_file_path = st.session_state.config_param["PDF_FILE_PATH"]
-        st.header("PDF reference", divider="blue")
-        pdf_display = self.get_pdf_display(pdf_file_path)
-        st.markdown(pdf_display, unsafe_allow_html=True)
+        st.header("Reference PDF", divider="blue")
+        st.write(f"You can refer the original PDF Document [here].({st.session_state.config_param['DOCUMENT_LINK']})")
