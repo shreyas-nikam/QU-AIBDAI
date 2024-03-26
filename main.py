@@ -7,6 +7,7 @@ from src.chatBot import ChatBot
 from src.courseMaterial import CourseMaterial
 from src.reference import Reference
 from src.quiz import Quiz
+from src.contactForm import ContactForm
 
 
 
