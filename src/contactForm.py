@@ -5,7 +5,7 @@ class ContactForm:
         st.header("Contact Form")
         st.write("For any technical issues, comments or feedback, please reach out to us. We would love to hear from you!")
         contact_form = """
-        <form action="https://formsubmit.co/info@qusandbox.com" method="POST">
+        <form action="https://formsubmit.co/shreyas@qusandbox.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="course" value="QU-AIBDAI">
             <input type="text" name="name" placeholder="Your name" required>
