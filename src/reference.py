@@ -23,4 +23,4 @@ class Reference:
 
     def main(self):
         st.header("Reference PDF", divider="blue")
-        st.write(f"You can refer the original PDF Document [here].({st.session_state.config_param['DOCUMENT_LINK']})")
+        st.write(f"You can refer the original PDF Document [here]({st.session_state.config_param['DOCUMENT_LINK']}).")
