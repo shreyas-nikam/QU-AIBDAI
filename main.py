@@ -25,12 +25,13 @@ if "page_chatbot" not in st.session_state:
     st.session_state.page_quiz = Quiz()
     st.session_state.page_reference = Reference()
     st.session_state.page_courseMaterial = CourseMaterial()
+    st.session_state.contact_form = ContactForm()
 
 
 st.set_page_config(page_title=st.session_state.config_param["APP_NAME"],layout="wide", page_icon="🏬")
 st.sidebar.image("https://www.quantuniversity.com/assets/img/logo5.jpg", use_column_width="always")
 # Set sidebar routes
-page = st.sidebar.radio("Select a Page:", ["Home", "Course Material","QuBot", "Quiz", "Reference PDF"], 
+page = st.sidebar.radio("Select a Page:", ["Home", "Course Material","QuBot", "Quiz", "Reference PDF", "Contact Form"], 
     disabled= True if not st.session_state.user_info else False)
 
 # check if the content is updated
@@ -48,3 +49,5 @@ else:
         st.session_state.page_quiz.main()
     elif page == "Reference PDF":
         st.session_state.page_reference.main()
+    elif page == "Contact Form":
+        st.session_state.contact_form.main()
