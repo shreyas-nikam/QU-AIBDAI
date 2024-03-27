@@ -111,7 +111,7 @@ Context:
 Question:
 {question}
 
-If the answer is not present in the context, return "Please provide more context to answer the question. Please check the official reference pdf here: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2023.ipd.pdf".
+If the answer is not present in the context, return "Please provide more context to answer the question. Please check the official reference pdf here: https://rpc.cfainstitute.org/-/media/documents/article/rf-brief/ai-and-big-data-in-investments.pdf".
             """)
             ],
             input_variables=["history","context","question"],
